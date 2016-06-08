@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import pl.pogos.connection.pool.test.config.DatabaseConfiguration;
 import pl.pogos.connection.pool.test.config.ServiceConfiguration;
-import pl.pogos.connection.pool.test.service.SimpleQueryService;
+import pl.pogos.connection.pool.test.service.QueryService;
 
 public class Application
 {
@@ -22,8 +22,8 @@ public class Application
             LOGGER.info(name);
         }
 
-        SimpleQueryService simpleQueryService = (SimpleQueryService) context.getBean("simpleQueryService");
-        LOGGER.info("Date from dual: " + simpleQueryService.getDateFromDual());
+        QueryService queryService = (QueryService) context.getBean("queryService");
+        LOGGER.info("Date from dual: " + queryService.getDateFromDual());
 
         LOGGER.info("Stop connection pool test");
 

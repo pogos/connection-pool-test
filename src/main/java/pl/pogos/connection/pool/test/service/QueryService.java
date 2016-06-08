@@ -12,9 +12,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 @Service
-public class SimpleQueryService {
+public class QueryService {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(SimpleQueryService.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(QueryService.class);
 
     private static final String DATE_QUERY = "select sysdate from dual";
 
